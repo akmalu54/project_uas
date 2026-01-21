@@ -77,14 +77,21 @@ session_start();
                         </a>
                     </li>
                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="vbooking.php">
+                            <i class="fas fa-ticket-alt"></i> Booking Tiket
+                        </a>
+                    </li>
+                    
                     <?php if (isset($_SESSION['username'])): ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle user-name" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user-circle"></i> Halo, <?php echo $_SESSION['username']; ?>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="vbooking.php"><i class="fas fa-history me-2"></i>Riwayat Booking</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-danger" href="logout.php">Logout</a></li>
+                                <li><a class="dropdown-item text-danger" href="logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                             </ul>
                         </li>
                     <?php else: ?>
@@ -104,7 +111,10 @@ session_start();
             <div class="header-content">
                 <h1 class="fw-bold mb-3 text-uppercase">Selamat Datang di 7 Summits Sembalun</h1>
                 <p class="lead fs-4">Taklukkan Puncak Tertinggi dan Nikmati Keindahan Alam Rinjani</p>
-                <a href="vsummits.php" class="btn btn-success btn-lg mt-3 px-5 py-3 shadow">Mulai Petualangan</a>
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <a href="vsummits.php" class="btn btn-success btn-lg px-5 py-3 shadow">Mulai Petualangan</a>
+                    <a href="tbooking.php" class="btn btn-warning btn-lg px-5 py-3 shadow fw-bold">Pesan Tiket</a>
+                </div>
             </div>
         </div>
     </header>
@@ -121,9 +131,14 @@ session_start();
                         <p>
                             Ketujuh puncak tersebut meliputi <b>Gunung Rinjani</b> sebagai ikon utama, disusul oleh deretan bukit eksotis seperti Bukit Sempana, Bukit Nanggi, Bukit Lembah Gedong, Bukit Kondok, Bukit Anak Dara, dan Bukit Pergasingan.
                         </p>
-                        <a href="vkomentar.php" class="btn btn-outline-dark mt-3">
-                            <i class="fas fa-comment-dots"></i> Lihat Apa Kata Pendaki
-                        </a>
+                        <div class="mt-4">
+                            <a href="vkomentar.php" class="btn btn-outline-dark me-2">
+                                <i class="fas fa-comment-dots"></i> Lihat Apa Kata Pendaki
+                            </a>
+                            <a href="tbooking.php" class="btn btn-outline-success">
+                                <i class="fas fa-calendar-check"></i> Booking Pendakian
+                            </a>
+                        </div>
                     </div>
                 </div>
 

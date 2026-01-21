@@ -51,7 +51,7 @@ $result = $koneksi->query($sql);
         <div class="col-md-6"><h2>Destinasi Puncak</h2></div>
         <?php if(isset($_SESSION['username'])): ?>
         <div class="col-md-6 text-md-end">
-            <a href="tsummits.php" class="btn btn-success">+ Tambah Data</a>
+            <a href="tbooking.php" class="btn btn-success">+ Booking Ticket</a>
         </div>
         <?php endif; ?>
     </div>
