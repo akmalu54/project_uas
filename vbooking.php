@@ -45,7 +45,7 @@ $result = $koneksi->query($sql);
     <nav class="navbar navbar-dark bg-dark mb-4 text-white">
         <div class="container">
             <span class="navbar-brand">Riwayat Tiket: <strong><?= $user_login; ?></strong></span>
-            <a href="vsummits.php" class="btn btn-outline-light btn-sm">Kembali ke Home</a>
+            <a href="vsummits.php" class="btn btn-outline-light btn-sm">Home</a>
         </div>
     </nav>
 
